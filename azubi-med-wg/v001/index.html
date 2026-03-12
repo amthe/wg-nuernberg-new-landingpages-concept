@@ -855,11 +855,9 @@
             <h2 class="section-title">Meld dich – unverbindlich!</h2>
             <p class="section-text">Schreib uns kurz, wer du bist und welche Ausbildung du machst. Wir melden uns persönlich bei dir.</p>
             <div class="contact-grid">
-                <form class="contact-form" id="contact-form" action="https://formsubmit.co/info@wg-nuernberg.de" method="POST">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="">
+                <form class="contact-form" id="contact-form" name="contact-azubi-med-wg" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <p style="display:none"><input name="bot-field"></p>
                     <input type="hidden" name="_source" value="azubi-med-wg">
-                    <input type="hidden" name="_subject" value="Neue Anfrage: Azubi-Med-WG">
                     <div class="form-group">
                         <label for="name">Dein Name</label>
                         <input type="text" id="name" name="name" required>
@@ -965,7 +963,7 @@
                 method: 'POST',
                 body: formData,
                 headers: {
-                    'Accept': 'application/json', 'Content-Type': 'application/json'
+                    'Accept': 'application/json'
                 }
             }).then(response => {
                 if (response.ok) {
