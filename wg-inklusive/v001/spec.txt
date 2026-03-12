@@ -1,0 +1,171 @@
+# WG Nürnberg Landing Page — Inklusive WG
+
+> Design: Siehe CORPORATE-DESIGN.md für Farben, Logo, Typografie und Layout.
+
+
+## Seitentyp
+Landing Page für eine spezifische WG-Zielgruppe
+
+## Zielgruppe
+Menschen mit Behinderung (psychisch, Lernbehinderung, Autismus, chronische Erkrankung, nach Reha/Klinik) die selbstbestimmt in einer WG leben möchten
+
+## Seitenname
+INKLUSIVE WG
+
+---
+
+## HERO
+
+Tag: Inklusive WG · Nürnberg · Innenstadt
+Überschrift: Gemeinsam wohnen, selbstbestimmt leben
+Untertitel: Eine WG für Menschen mit und ohne Behinderung – mitten in Nürnberg. Hier zählt, wer du bist. Nicht, was in deinem Ausweis steht.
+
+Hinweis (Barrierefreiheit):
+⚠️ Unsere WG befindet sich in einem Altbau in der Innenstadt und ist leider nicht rollstuhlzugänglich (kein Aufzug, Treppen). Wir arbeiten daran, in Zukunft auch rollstuhlgerechten Wohnraum anbieten zu können.
+
+Buttons: [Jetzt anfragen] [Mehr erfahren]
+
+Hero-Card:
+- Badge: Inklusiv | wohnen in Nürnberg
+- Stats: ~25 min. Innenstadt | 24/7 Gemeinschaft | WG Inklusiv & offen | ♿→🤝 Miteinander
+
+---
+
+## SEKTION: Was dich erwartet
+
+Label: Was dich erwartet
+Titel: Ein Zuhause, das zu dir passt
+Text: Inklusion ist bei uns kein Konzept – sondern Alltag. Wir leben zusammen, unterstützen uns gegenseitig und respektieren, dass jeder Mensch seinen eigenen Rhythmus hat.
+
+Karten (2x3 Grid):
+- 🤝 Echte Gemeinschaft: Mitbewohner, die füreinander da sind – ohne Bevormundung, mit echtem Interesse aneinander.
+- 🔑 Selbstbestimmt wohnen: Dein Zimmer, dein Raum, dein Tempo. Du entscheidest, wie viel Gemeinschaft du brauchst.
+- 🚇 Zentrale Lage: ÖPNV, Ärzte, Apotheken, Einkaufsmöglichkeiten – alles in direkter Nähe.
+- 🧘 Ruhige Atmosphäre: Ein geschützter Raum zum Auftanken. Rückzug ist genauso willkommen wie Geselligkeit.
+- 📋 Klare Strukturen: Gemeinsame Regeln geben Orientierung – ohne einzuengen. Transparenz und Verlässlichkeit.
+- 🍳 Gemeinsame Küche: Zusammen kochen, zusammen essen – oder einfach für dich allein. Beides geht.
+
+---
+
+## SEKTION: Herzstück (farbiger Hintergrund)
+
+Label: Das Herzstück
+Titel: Inklusion heißt: Du gehörst dazu
+Text: Wir glauben, dass Menschen mit und ohne Behinderung voneinander lernen und sich gegenseitig bereichern. Unsere WG ist der Beweis, dass das im Alltag funktioniert.
+
+Icons: 🗣️ Austausch | 💪 Stärken | 🎯 Teilhabe | ❤️ Respekt | 🌈 Vielfalt
+
+---
+
+## SEKTION: Unterstützung
+
+Label: Unterstützung
+Titel: So viel Hilfe wie nötig, so viel Freiheit wie möglich
+Text: Jeder Mensch braucht unterschiedliche Unterstützung. Bei uns bekommst du, was du brauchst – und bestimmst selbst, wo du es allein schaffst.
+
+Blöcke (2x2 Grid):
+- 🏥 Ärzte & Therapie in der Nähe: Fachärzte, Therapeuten und Beratungsstellen fußläufig erreichbar
+- 🚌 Gute ÖPNV-Anbindung: Bus und Bahn direkt vor der Tür – auch zu Werkstätten und Arbeitgebern
+- 🛒 Nahversorgung: Supermarkt, Apotheke und Drogerie in wenigen Gehminuten
+- 📞 Ansprechpartner: Feste Ansprechpartner für organisatorische Fragen und Unterstützung
+
+Highlight-Box:
+- Große Zeile: Selbstbestimmt leben
+- Untertitel: in deinen eigenen vier Wänden
+- Text: Ein WG-Zimmer ist mehr als nur ein Dach über dem Kopf. Es ist der Schritt in ein eigenständiges Leben – mit der Sicherheit einer Gemeinschaft, die dich trägt, wenn du sie brauchst.
+
+---
+
+## SEKTION: Zusammenleben (dunkler Hintergrund)
+
+Label: Zusammenleben
+Titel: Wie der Alltag bei uns aussieht
+Text: Kein starrer Tagesplan, kein Heim-Charakter. Stattdessen: echtes WG-Leben mit Rücksicht, Offenheit und guten Gesprächen.
+
+Pillen/Blöcke:
+- ☀️ Morgens: Dein Rhythmus — Ob Frühaufsteher oder Langschläfer – du startest den Tag so, wie es für dich passt.
+- 🍽️ Gemeinsam oder allein essen — Die Küche steht allen offen. Manchmal kocht man zusammen, manchmal für sich – beides ist okay.
+- 🛋️ Rückzug & Gemeinschaft — Du bestimmst, wie viel Nähe du brauchst. Dein Zimmer ist dein geschützter Raum.
+- 🌙 Abends: Ruhige WG — Keine Partys, keine lauten Nächte. Ein Zuhause, in dem du zur Ruhe kommen kannst.
+
+---
+
+## SEKTION: Kostenvergleich (grauer Hintergrund)
+
+Label: Finanzen
+Titel: Bezahlbar wohnen – ohne Kompromisse
+Text: Ein WG-Zimmer ist deutlich günstiger als eine eigene Wohnung – und bietet trotzdem alles, was du brauchst. Das gesparte Geld bleibt für dein Leben.
+
+Vergleich:
+Einzelwohnung Nürnberg:
+- Kaltmiete (30 m²): ~850 €
+- Nebenkosten: ~150 €
+- Internet: ~30 €
+- GEZ / Rundfunk: ~18 €
+- Gesamt: ~1.050 €
+
+WG-Zimmer (diese WG):
+- Warmmiete inkl. NK: ~650 €
+- Internet inklusive: 0 €
+- GEZ geteilt: ~6 €
+- Gemeinschaftsräume: ✓
+- Gemeinschaft inklusive: ✓
+- Gesamt: ~656 €
+
+Ersparnis-Box: Fast 400 € weniger im Monat – und dafür ein Zuhause mit Gemeinschaft, Unterstützung und echter Lebensqualität. ≈ 4.700 € / Jahr
+
+---
+
+## SEKTION: Für wen (dunkler Hintergrund)
+
+Label: Für wen diese WG ist
+Titel: Ein Zuhause für alle
+Text: Unsere inklusive WG richtet sich an Menschen, die selbstbestimmt leben möchten – in einer Gemeinschaft, die Vielfalt als Stärke versteht.
+
+Keyword-Gruppen (3 Spalten):
+Passend wenn du …:
+- *selbstbestimmt wohnen möchtest*
+- Gemeinschaft suchst, aber keinen Heimalltag
+- in einer inklusiven Umgebung leben willst
+- *deinen Alltag weitgehend eigenständig meisterst*
+- Unterstützung schätzt, aber nicht brauchst 24/7
+
+Oft gesucht von …:
+- *Menschen mit psychischer Beeinträchtigung*
+- Menschen mit Lernbehinderung
+- Autist:innen, die WG-kompatibel leben möchten
+- *Menschen nach Reha oder Klinikaufenthalt*
+- Menschen mit chronischer Erkrankung
+
+Was wir bieten:
+- *Inklusives WG-Zimmer Nürnberg*
+- Zentrale Lage mit kurzen Wegen
+- Ruhige, respektvolle Atmosphäre
+- *Feste Ansprechpartner*
+- Bezahlbarer Wohnraum
+
+(* = hervorgehoben)
+
+---
+
+## SEKTION: Kontakt (grauer Hintergrund)
+
+Label: Interesse?
+Titel: Wir freuen uns auf dich
+Text: Schreib uns einfach. Erzähl uns kurz, wer du bist und was du dir vorstellst. Wir melden uns zeitnah – und beantworten gern alle Fragen.
+
+Info:
+- 📍 Nürnberg, Innenstadt
+- 🏠 Inklusive WG
+- ⚠️ Nicht rollstuhlzugänglich
+- 📩 Antwort innerhalb 24h
+
+Formular-Felder:
+- Dein Name (Text)
+- E-Mail (Email)
+- Kurz zu dir (Textarea)
+- Gewünschter Einzug (Monat)
+- Besondere Bedürfnisse / Fragen (Textarea)
+- Button: [Anfrage senden]
+
+WhatsApp-Button: 💬 WhatsApp schreiben → https://wa.me/499112355810

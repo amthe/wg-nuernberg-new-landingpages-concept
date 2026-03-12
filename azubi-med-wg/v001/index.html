@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azubi-Med-WG | WG Nürnberg</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #5755d9;
+            --primary-hover: #4b48d6;
+            --primary-active: #3634d2;
+            --secondary-bg: #f1f1fc;
+            --success: #32b643;
+            --warning: #ffb700;
+            --error: #e85600;
+            --text: #3b4351;
+            --muted: #66758c;
+            --dark: #303742;
+            --border: #dadee4;
+            --light-bg: #f7f8f9;
+            --white: #fff;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--white);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dadee4' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .logo svg {
+            flex-shrink: 0;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-bg);
+        }
+
+        .btn-success {
+            background-color: var(--success);
+            color: var(--white);
+        }
+
+        .btn-success:hover {
+            background-color: #2a9d3a;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--secondary-bg);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .hero-motto {
+            font-style: italic;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .hero-warning {
+            background: #fff8e6;
+            border-left: 4px solid var(--warning);
+            padding: 12px 16px;
+            margin-bottom: 24px;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.9rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .hero-card-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .hero-card-icons {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .hero-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        /* Address Bar */
+        .address-bar {
+            background: var(--primary);
+            color: var(--white);
+            padding: 16px 0;
+        }
+
+        .address-bar .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+
+        .address-bar a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .address-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-light {
+            background: var(--light-bg);
+        }
+
+        .section-dark {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .section-dark .section-text {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .section-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .section-primary .section-text {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--secondary-bg);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .section-dark .section-label,
+        .section-primary .section-label {
+            background: rgba(255,255,255,0.2);
+            color: var(--white);
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        .section-text {
+            color: var(--muted);
+            font-size: 1.05rem;
+            max-width: 700px;
+            margin-bottom: 32px;
+        }
+
+        .section-quote {
+            font-style: italic;
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+            margin: 24px 0;
+            color: var(--muted);
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .cards-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .cards-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Blocks */
+        .blocks {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .blocks {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .block {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .block-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .block h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .block p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* Pills/Tags */
+        .pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .pill {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+
+        .section-dark .pill {
+            color: var(--white);
+        }
+
+        /* Two Columns */
+        .two-cols {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .two-cols {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .col-list h4 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .col-list ul {
+            list-style: none;
+        }
+
+        .col-list li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: var(--muted);
+        }
+
+        .col-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Tour Placeholder */
+        .tour-placeholder {
+            background: var(--light-bg);
+            border: 2px dashed var(--border);
+            border-radius: 8px;
+            padding: 60px 20px;
+            text-align: center;
+            color: var(--muted);
+            margin-top: 32px;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .gallery-item {
+            background: var(--light-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta-section .section-text {
+            margin: 0 auto 24px;
+        }
+
+        .cta-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-form {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(87, 85, 217, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 14px 28px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer h4 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+
+        .footer p, .footer a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="https://www.wg-nuernberg.de" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 180 180"><path fill="#535353" d="M108 34c-3-3-7-5-10-5H34c-3 0-7 2-10 5s-5 7-5 11v44l1 8c1 6 5 10 9 12s8 1 12 1c0 6 0 12-2 18 4-7 9-13 14-18h45c7 0 13-5 14-12l1-7V46c0-5-2-9-5-12z"/><path fill="#535353" d="M99 45c2-2 5-3 7-3h44c3 0 6 1 7 3 2 2 4 5 4 8v30l-1 7c0 3-3 6-6 8h-8c-1 5 0 9 1 13l-10-13h-31c-4 0-9-3-10-8v-5-32c0-3 1-6 3-8z"/><path fill="#FFF" d="M32 81l3-7 3-8 3-8 2-9 1-1v-2l1-2h4l1 1 1 1v6l-3 7-3 8-3 7-2 7-1 1v5l-1 2v2l1 2 1 1h1l3-1 5-5 5-6 5-7 5-9 3-8 1-1h2l2 1 1 2v1l-1 2-1 3-1 3-1 4v12l1 3v2l1 2 2 1 2-1 3-3 3-4 2-5 3-6 2-5 2-6 1-5 1-4v-4l1-3 1-4 1-2 1-1 1-1 1-1 2 1 1 3v4l-1 5-1 4-1 5-3 9-4 10-5 8-4 7-2 2-3 2-3 1-2 1q-3 0-5-2l-3-4-2-6v-7l-4 6-4 5-3 3-4 3-4 3-4 1-4-1-2-2-2-3v-4-6l1-5zM140 71l-1 1h-2l-3 1-3 1-2 1-1 1h-1-1l-1 1-1-1h-1l-1-2v-1l1-2 2-1 2-1h3l1-1h2l3-1 3-1 2-1 2 1 2 1 1 1v4l-3 7-5 6-6 5-7 3h-1l-2 1h-7-1v-1l-4-2-3-3-1-3-1-4 1-5 2-6 3-5 4-5 5-5 5-3 3-2 3-2 4-1 3-1h3l2 2 2 1v5l-1 1h1-1-2l-2-1-1-1-1-1h-1l-5 2-6 4-6 5-4 5-4 6-1 6 1 4 3 3 2 1 3 1 2-1 3-1 3-1 2-2q4-2 6-5l4-7v-1z"/></svg>
+                WG Nürnberg
+            </a>
+            <a href="#kontakt" class="btn btn-primary">Jetzt vormerken</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">Nürnbergs erste Med-Azubi-WG</span>
+                    <h1>Gemeinsam wohnen. Gemeinsam wachsen.</h1>
+                    <p class="hero-subtitle">Die erste WG Nürnbergs, die exklusiv für Auszubildende in medizinischen Berufen geschaffen wurde – zum Wohnen, Lernen und Voneinanderlernen.</p>
+                    <p class="hero-motto">„Gemeinsam wohnen – gemeinsam lernen – voneinander lernen"</p>
+                    <div class="hero-warning">
+                        ⚠️ Wir sind aktuell in der Aufbauphase – Voranmeldungen sind bereits möglich!
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#kontakt" class="btn btn-primary">Unverbindlich vormerken</a>
+                        <a href="#warum" class="btn btn-secondary">Mehr erfahren</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <span class="hero-card-badge">Start: August 2026</span>
+                    <div class="hero-card-icons">🏥 👩‍⚕️ 🩺</div>
+                    <h3>Exklusiv für Med-Azubis</h3>
+                    <p>Krankenpflege, MFA, Physiotherapie, Radiologie, Pharmazie und viele mehr – unter einem Dach, voneinander lernend, füreinander da.</p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">20+</div>
+                            <div class="hero-stat-label">Jahre Erfahrung</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">#1</div>
+                            <div class="hero-stat-label">Med-WG NB</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">Aug 2026</div>
+                            <div class="hero-stat-label">Starttermin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address Bar -->
+    <div class="address-bar">
+        <div class="container">
+            <span>📍 Vordere Sterngasse 2a, 90402 Nürnberg</span>
+            <a href="tel:09112355810">📞 0911-2355810</a>
+            <a href="mailto:info@wg-nuernberg.de">✉️ info@wg-nuernberg.de</a>
+        </div>
+    </div>
+
+    <!-- Warum diese WG -->
+    <section id="warum" class="section">
+        <div class="container">
+            <span class="section-label">Warum diese WG</span>
+            <h2 class="section-title">Wir finden es unfair – und handeln</h2>
+            <p class="section-text">Ein Großteil der WG-Anbieter möchte keine Auszubildenden unterbringen. Das finden wir nicht zeitgemäß. Mit über 20 Jahren Erfahrung in der Vermittlung und Betreuung von WG-Zimmern schaffen wir jetzt eine echte Alternative.</p>
+            <blockquote class="section-quote">
+                „Wir sind einer der ältesten Anbieter auf dem Nürnberger Markt – und genau deshalb wissen wir: Medizin-Azubis verdienen einen Platz, der wirklich zu ihrem Leben passt."
+            </blockquote>
+            <div class="blocks">
+                <div class="block">
+                    <div class="block-icon">🚫</div>
+                    <h4>Das Problem</h4>
+                    <p>Viele Vermieter lehnen Azubis pauschal ab – dabei sind gerade Medizin-Azubis zuverlässig, engagiert und auf der Suche nach einem stabilen Zuhause.</p>
+                </div>
+                <div class="block">
+                    <div class="block-icon">💡</div>
+                    <h4>Unsere Lösung</h4>
+                    <p>Eine WG, die von Anfang an auf die Bedürfnisse von Med-Azubis ausgerichtet ist – fachlich, sozial und praktisch.</p>
+                </div>
+                <div class="block">
+                    <div class="block-icon">🤝</div>
+                    <h4>Unser Versprechen</h4>
+                    <p>Wir sind von unserer Idee überzeugt und begleiten euch mit 20 Jahren Erfahrung. Persönlich, verlässlich, auf Augenhöhe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Was uns unterscheidet -->
+    <section class="section section-light">
+        <div class="container">
+            <span class="section-label">Was uns unterscheidet</span>
+            <h2 class="section-title">Mehr als nur ein Zimmer</h2>
+            <p class="section-text">Was macht die Azubi-Med-WG anders als eine normale WG? Ganz einfach: der Mehrwert, der entsteht, wenn Menschen mit ähnlichen Zielen und unterschiedlichem Wissen zusammenleben.</p>
+            <div class="cards cards-3">
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Voneinander lernen</h3>
+                    <p>Krankenpfleger*in, MFA und Physio unter einem Dach? Das ergibt gegenseitige Unterstützung, die keine Bibliothek ersetzen kann.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏥</div>
+                    <h3>Fachliche Synergie</h3>
+                    <p>Ihr bringt unterschiedliche medizinische Blickwinkel mit. Zusammen entsteht ein Verständnis, das euch in Prüfung und Praxis stärkt.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💛</div>
+                    <h3>Echte Gemeinschaft</h3>
+                    <p>Keine anonyme WG – sondern Menschen, die denselben anspruchsvollen Alltag kennen und füreinander da sind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zielgruppe -->
+    <section class="section section-dark">
+        <div class="container">
+            <span class="section-label">Für wen diese WG ist</span>
+            <h2 class="section-title">Alle medizinischen Ausbildungsberufe willkommen</h2>
+            <p class="section-text">Wir möchten bewusst Azubis unterschiedlichster medizinischer Ausbildungsrichtungen zusammenbringen. So bekommt das Zusammenwohnen noch größeren Mehrwert.</p>
+            <div class="pills">
+                <span class="pill">🩺 Krankenpflege / Pflegefachkraft</span>
+                <span class="pill">🏥 Medizinische Fachangestellte (MFA)</span>
+                <span class="pill">🦴 Physiotherapie</span>
+                <span class="pill">☢️ Radiologie / MTRA</span>
+                <span class="pill">💊 Pharmazeutisch-kaufm. Ang. (PKA)</span>
+                <span class="pill">🦷 Zahnmedizinische Fachangestellte (ZFA)</span>
+                <span class="pill">🧪 MTA / Laborassistenz</span>
+                <span class="pill">🚑 Rettungssanitäter / Notfallsanitäter</span>
+                <span class="pill">👁️ Optometrie / Augenoptik</span>
+                <span class="pill">➕ Alle weiteren med. Ausbildungen</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Die Wohnung -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Die Wohnung</span>
+            <h2 class="section-title">Euer neues Zuhause</h2>
+            <p class="section-text">Eine großzügige, helle WG mitten in Nürnberg – designed für Menschen, die täglich viel leisten. Hier könnt ihr ankommen, durchatmen und euch auf das Wesentliche konzentrieren.</p>
+            <div class="two-cols">
+                <div class="col-list">
+                    <h4>🏠 WG-Gemeinschaftsbereiche</h4>
+                    <ul>
+                        <li>Vollausgestattete Küche</li>
+                        <li>Schnelles WLAN inklusive</li>
+                        <li>Waschmaschine & Trockner</li>
+                        <li>Fahrradabstellbereich im Hof</li>
+                        <li>U-Bahn & Bus direkt vor der Tür</li>
+                        <li>Innenstadt in wenigen Minuten</li>
+                    </ul>
+                </div>
+                <div class="col-list">
+                    <h4>🛏️ Zimmer-Ausstattung</h4>
+                    <ul>
+                        <li>Möbliert (Bett, Schreibtisch, Schrank)</li>
+                        <li>Helle, großzügige Grundfläche</li>
+                        <li>Eigenes Schloss / Privatsphäre</li>
+                        <li>Ausreichend Stauraum</li>
+                        <li>Homeoffice-tauglich</li>
+                        <li>Einzel- & Doppelzimmer möglich</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tour-placeholder">
+                🔄 360° Tour wird hier eingebettet
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">📷 Foto 1</div>
+                <div class="gallery-item">📷 Foto 2</div>
+                <div class="gallery-item">📷 Foto 3</div>
+                <div class="gallery-item">📷 Foto 4</div>
+                <div class="gallery-item">📷 Foto 5</div>
+                <div class="gallery-item">📷 Foto 6</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-primary cta-section">
+        <div class="container">
+            <span class="section-label">Jetzt handeln</span>
+            <h2 class="section-title">Dein Platz wartet.</h2>
+            <p class="section-text">Die Azubi-Med-WG startet im August 2026. Plätze sind begrenzt – merke dich jetzt unverbindlich vor und sei dabei, wenn Geschichte geschrieben wird.</p>
+            <span class="cta-badge">📅 Start: August 2026</span>
+            <div>
+                <a href="#kontakt" class="btn btn-secondary" style="background: var(--white); color: var(--primary);">Jetzt unverbindlich vormerken</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="section section-light">
+        <div class="container">
+            <span class="section-label">Kontakt & Voranmeldung</span>
+            <h2 class="section-title">Meld dich – unverbindlich!</h2>
+            <p class="section-text">Schreib uns kurz, wer du bist und welche Ausbildung du machst. Wir melden uns persönlich bei dir.</p>
+            <div class="contact-grid">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Dein Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ausbildung">Deine Ausbildung</label>
+                        <select id="ausbildung" name="ausbildung" required>
+                            <option value="">Bitte wählen...</option>
+                            <option value="krankenpflege">Krankenpflege</option>
+                            <option value="mfa">MFA</option>
+                            <option value="physiotherapie">Physiotherapie</option>
+                            <option value="radiologie">Radiologie</option>
+                            <option value="pka">PKA</option>
+                            <option value="zfa">ZFA</option>
+                            <option value="mta">MTA</option>
+                            <option value="rettungssanitaeter">Rettungssanitäter</option>
+                            <option value="sonstiges">Sonstiger med. Beruf</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="jahr">Ausbildungsjahr</label>
+                        <select id="jahr" name="jahr" required>
+                            <option value="">Bitte wählen...</option>
+                            <option value="1">1. Jahr</option>
+                            <option value="2">2. Jahr</option>
+                            <option value="3">3. Jahr</option>
+                            <option value="noch-nicht">Noch nicht begonnen</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nachricht">Kurze Nachricht (optional)</label>
+                        <textarea id="nachricht" name="nachricht"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Jetzt vormerken</button>
+                </form>
+                <div>
+                    <h4>Oder direkt per WhatsApp:</h4>
+                    <p style="color: var(--muted); margin: 12px 0;">Schnell und unkompliziert – schreib uns einfach eine Nachricht!</p>
+                    <a href="https://wa.me/499112355810" class="btn btn-success whatsapp-btn">
+                        💬 WhatsApp schreiben
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="https://www.wg-nuernberg.de" class="logo" style="margin-bottom: 16px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 180 180"><path fill="#535353" d="M108 34c-3-3-7-5-10-5H34c-3 0-7 2-10 5s-5 7-5 11v44l1 8c1 6 5 10 9 12s8 1 12 1c0 6 0 12-2 18 4-7 9-13 14-18h45c7 0 13-5 14-12l1-7V46c0-5-2-9-5-12z"/><path fill="#535353" d="M99 45c2-2 5-3 7-3h44c3 0 6 1 7 3 2 2 4 5 4 8v30l-1 7c0 3-3 6-6 8h-8c-1 5 0 9 1 13l-10-13h-31c-4 0-9-3-10-8v-5-32c0-3 1-6 3-8z"/><path fill="#FFF" d="M32 81l3-7 3-8 3-8 2-9 1-1v-2l1-2h4l1 1 1 1v6l-3 7-3 8-3 7-2 7-1 1v5l-1 2v2l1 2 1 1h1l3-1 5-5 5-6 5-7 5-9 3-8 1-1h2l2 1 1 2v1l-1 2-1 3-1 3-1 4v12l1 3v2l1 2 2 1 2-1 3-3 3-4 2-5 3-6 2-5 2-6 1-5 1-4v-4l1-3 1-4 1-2 1-1 1-1 1-1 2 1 1 3v4l-1 5-1 4-1 5-3 9-4 10-5 8-4 7-2 2-3 2-3 1-2 1q-3 0-5-2l-3-4-2-6v-7l-4 6-4 5-3 3-4 3-4 3-4 1-4-1-2-2-2-3v-4-6l1-5zM140 71l-1 1h-2l-3 1-3 1-2 1-1 1h-1-1l-1 1-1-1h-1l-1-2v-1l1-2 2-1 2-1h3l1-1h2l3-1 3-1 2-1 2 1 2 1 1 1v4l-3 7-5 6-6 5-7 3h-1l-2 1h-7-1v-1l-4-2-3-3-1-3-1-4 1-5 2-6 3-5 4-5 5-5 5-3 3-2 3-2 4-1 3-1h3l2 2 2 1v5l-1 1h1-1-2l-2-1-1-1-1-1h-1l-5 2-6 4-6 5-4 5-4 6-1 6 1 4 3 3 2 1 3 1 2-1 3-1 3-1 2-2q4-2 6-5l4-7v-1z"/></svg>
+                        WG Nürnberg
+                    </a>
+                    <p>Vordere Sterngasse 2a<br>90402 Nürnberg</p>
+                    <p style="margin-top: 12px;">
+                        <a href="tel:09112355810">0911-2355810</a><br>
+                        <a href="mailto:info@wg-nuernberg.de">info@wg-nuernberg.de</a>
+                    </p>
+                </div>
+                <div>
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.wg-nuernberg.de">Startseite</a></li>
+                        <li><a href="https://www.wg-nuernberg.de/impressum">Impressum</a></li>
+                        <li><a href="https://www.wg-nuernberg.de/datenschutz">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Kontakt</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@wg-nuernberg.de">E-Mail schreiben</a></li>
+                        <li><a href="https://wa.me/499112355810">WhatsApp</a></li>
+                        <li><a href="tel:09112355810">Anrufen</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 WG Nürnberg. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+# WG Nürnberg Landing Page — Azubi-Med-WG
+
+> Design: Siehe CORPORATE-DESIGN.md für Farben, Logo, Typografie und Layout.
+
+
+## Seitentyp
+Landing Page für eine spezifische WG-Zielgruppe
+
+## Zielgruppe
+Auszubildende in medizinischen Berufen (Krankenpflege, MFA, Physiotherapie, Radiologie, Pharmazie, ZFA, MTA, Rettungssanitäter, Optometrie etc.)
+
+## Seitenname
+AZUBI-MED-WG
+
+---
+
+## HERO
+
+Tag: Nürnbergs erste Med-Azubi-WG
+Überschrift: Gemeinsam wohnen. Gemeinsam wachsen.
+Untertitel: Die erste WG Nürnbergs, die exklusiv für Auszubildende in medizinischen Berufen geschaffen wurde – zum Wohnen, Lernen und Voneinanderlernen.
+Motto: „Gemeinsam wohnen – gemeinsam lernen – voneinander lernen"
+Hinweis (Warning): Wir sind aktuell in der Aufbauphase – Voranmeldungen sind bereits möglich!
+Buttons: [Unverbindlich vormerken] [Mehr erfahren]
+
+Hero-Card:
+- Badge: Start: August 2026
+- Icons: 🏥 👩‍⚕️ 🩺
+- Titel: Exklusiv für Med-Azubis
+- Text: Krankenpflege, MFA, Physiotherapie, Radiologie, Pharmazie und viele mehr – unter einem Dach, voneinander lernend, füreinander da.
+
+Stats:
+- 20+ | Jahre Erfahrung
+- #1 | Med-WG NB
+- Aug 2026 | Starttermin
+
+---
+
+## SEKTION: Warum diese WG
+
+Label: Warum diese WG
+Titel: Wir finden es unfair – und handeln
+Text: Ein Großteil der WG-Anbieter möchte keine Auszubildenden unterbringen. Das finden wir nicht zeitgemäß. Mit über 20 Jahren Erfahrung in der Vermittlung und Betreuung von WG-Zimmern schaffen wir jetzt eine echte Alternative.
+Zitat: „Wir sind einer der ältesten Anbieter auf dem Nürnberger Markt – und genau deshalb wissen wir: Medizin-Azubis verdienen einen Platz, der wirklich zu ihrem Leben passt."
+
+Blöcke:
+- 🚫 Das Problem: Viele Vermieter lehnen Azubis pauschal ab – dabei sind gerade Medizin-Azubis zuverlässig, engagiert und auf der Suche nach einem stabilen Zuhause.
+- 💡 Unsere Lösung: Eine WG, die von Anfang an auf die Bedürfnisse von Med-Azubis ausgerichtet ist – fachlich, sozial und praktisch.
+- 🤝 Unser Versprechen: Wir sind von unserer Idee überzeugt und begleiten euch mit 20 Jahren Erfahrung. Persönlich, verlässlich, auf Augenhöhe.
+
+---
+
+## SEKTION: Was uns unterscheidet (grauer Hintergrund)
+
+Label: Was uns unterscheidet
+Titel: Mehr als nur ein Zimmer
+Text: Was macht die Azubi-Med-WG anders als eine normale WG? Ganz einfach: der Mehrwert, der entsteht, wenn Menschen mit ähnlichen Zielen und unterschiedlichem Wissen zusammenleben.
+
+Karten (3 Spalten):
+- 📚 Voneinander lernen: Krankenpfleger*in, MFA und Physio unter einem Dach? Das ergibt gegenseitige Unterstützung, die keine Bibliothek ersetzen kann.
+- 🏥 Fachliche Synergie: Ihr bringt unterschiedliche medizinische Blickwinkel mit. Zusammen entsteht ein Verständnis, das euch in Prüfung und Praxis stärkt.
+- 💛 Echte Gemeinschaft: Keine anonyme WG – sondern Menschen, die denselben anspruchsvollen Alltag kennen und füreinander da sind.
+
+---
+
+## SEKTION: Zielgruppe (dunkler Hintergrund)
+
+Label: Für wen diese WG ist
+Titel: Alle medizinischen Ausbildungsberufe willkommen
+Text: Wir möchten bewusst Azubis unterschiedlichster medizinischer Ausbildungsrichtungen zusammenbringen. So bekommt das Zusammenwohnen noch größeren Mehrwert.
+
+Pills/Tags:
+- 🩺 Krankenpflege / Pflegefachkraft
+- 🏥 Medizinische Fachangestellte (MFA)
+- 🦴 Physiotherapie
+- ☢️ Radiologie / MTRA
+- 💊 Pharmazeutisch-kaufm. Ang. (PKA)
+- 🦷 Zahnmedizinische Fachangestellte (ZFA)
+- 🧪 MTA / Laborassistenz
+- 🚑 Rettungssanitäter / Notfallsanitäter
+- 👁️ Optometrie / Augenoptik
+- ➕ Alle weiteren med. Ausbildungen
+
+---
+
+## SEKTION: Die Wohnung
+
+Label: Die Wohnung
+Titel: Euer neues Zuhause
+Text: Eine großzügige, helle WG mitten in Nürnberg – designed für Menschen, die täglich viel leisten. Hier könnt ihr ankommen, durchatmen und euch auf das Wesentliche konzentrieren.
+
+Ausstattung links — 🏠 WG-Gemeinschaftsbereiche:
+- Vollausgestattete Küche
+- Schnelles WLAN inklusive
+- Waschmaschine & Trockner
+- Fahrradabstellbereich im Hof
+- U-Bahn & Bus direkt vor der Tür
+- Innenstadt in wenigen Minuten
+
+Ausstattung rechts — 🛏️ Zimmer-Ausstattung:
+- Möbliert (Bett, Schreibtisch, Schrank)
+- Helle, großzügige Grundfläche
+- Eigenes Schloss / Privatsphäre
+- Ausreichend Stauraum
+- Homeoffice-tauglich
+- Einzel- & Doppelzimmer möglich
+
+360° Tour: Platzhalter (iframe-Link wird später eingebettet)
+Bildergalerie: 6 Upload-Slots für Zimmerfotos
+
+---
+
+## SEKTION: CTA (farbiger Hintergrund)
+
+Label: Jetzt handeln
+Titel: Dein Platz wartet.
+Text: Die Azubi-Med-WG startet im August 2026. Plätze sind begrenzt – merke dich jetzt unverbindlich vor und sei dabei, wenn Geschichte geschrieben wird.
+Badge: 📅 Start: August 2026
+Button: [Jetzt unverbindlich vormerken]
+
+---
+
+## SEKTION: Kontakt (grauer Hintergrund)
+
+Label: Kontakt & Voranmeldung
+Titel: Meld dich – unverbindlich!
+Text: Schreib uns kurz, wer du bist und welche Ausbildung du machst. Wir melden uns persönlich bei dir.
+
+Formular-Felder:
+- Dein Name (Text)
+- E-Mail (Email)
+- Deine Ausbildung (Dropdown: Krankenpflege, MFA, Physiotherapie, Radiologie, PKA, ZFA, MTA, Rettungssanitäter, Sonstiger med. Beruf)
+- Ausbildungsjahr (Dropdown: 1./2./3. Jahr, Noch nicht begonnen)
+- Kurze Nachricht (Textarea, optional)
+- Button: [Jetzt vormerken]
+
+WhatsApp-Button: 💬 WhatsApp schreiben → https://wa.me/499112355810

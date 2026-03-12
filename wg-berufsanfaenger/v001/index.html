@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berufseinsteiger-WG | WG Nürnberg</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #5755d9;
+            --primary-hover: #4b48d6;
+            --primary-active: #3634d2;
+            --secondary-bg: #f1f1fc;
+            --success: #32b643;
+            --warning: #ffb700;
+            --error: #e85600;
+            --text: #3b4351;
+            --muted: #66758c;
+            --dark: #303742;
+            --border: #dadee4;
+            --light-bg: #f7f8f9;
+            --white: #fff;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--white);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dadee4' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .logo svg {
+            flex-shrink: 0;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-bg);
+        }
+
+        .btn-success {
+            background-color: var(--success);
+            color: var(--white);
+        }
+
+        .btn-success:hover {
+            background-color: #2a9d3a;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--secondary-bg);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .hero-card-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .hero-card-icons {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .hero-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        /* Address Bar */
+        .address-bar {
+            background: var(--primary);
+            color: var(--white);
+            padding: 16px 0;
+        }
+
+        .address-bar .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+
+        .address-bar a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .address-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-light {
+            background: var(--light-bg);
+        }
+
+        .section-dark {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .section-dark .section-text {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .section-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .section-primary .section-text {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--secondary-bg);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .section-dark .section-label,
+        .section-primary .section-label {
+            background: rgba(255,255,255,0.2);
+            color: var(--white);
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        .section-text {
+            color: var(--muted);
+            font-size: 1.05rem;
+            max-width: 700px;
+            margin-bottom: 32px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .cards-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .cards-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Blocks */
+        .blocks {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .blocks {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .block {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .block-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .block h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .block p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* Icon Row */
+        .icon-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .icon-item {
+            text-align: center;
+        }
+
+        .icon-item-icon {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+
+        .icon-item-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Grid Blocks */
+        .grid-blocks {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .grid-blocks {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .grid-block {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .grid-block-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .grid-block h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .grid-block p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--secondary-bg);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .highlight-box-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .highlight-box-label {
+            font-size: 1rem;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .highlight-box-text {
+            color: var(--text);
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Pills */
+        .pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .pill {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .section-dark .pill {
+            color: var(--white);
+        }
+
+        .pill-icon {
+            margin-right: 8px;
+        }
+
+        .pill-title {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .pill-text {
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        /* Comparison */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .comparison-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .comparison-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .comparison-item-label {
+            color: var(--muted);
+        }
+
+        .comparison-item-value {
+            font-weight: 500;
+        }
+
+        .comparison-total {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 2px solid var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .savings-box {
+            background: var(--secondary-bg);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .savings-box p {
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .savings-box-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Keyword Groups */
+        .keyword-groups {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .keyword-groups {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .keyword-group h4 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .keyword-group ul {
+            list-style: none;
+        }
+
+        .keyword-group li {
+            padding: 6px 0;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.75);
+        }
+
+        .keyword-group li.highlight {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta-section .section-text {
+            margin: 0 auto 24px;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-info {
+            margin-bottom: 24px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(87, 85, 217, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 14px 28px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer h4 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+
+        .footer p, .footer a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="https://www.wg-nuernberg.de" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 180 180"><path fill="#535353" d="M108 34c-3-3-7-5-10-5H34c-3 0-7 2-10 5s-5 7-5 11v44l1 8c1 6 5 10 9 12s8 1 12 1c0 6 0 12-2 18 4-7 9-13 14-18h45c7 0 13-5 14-12l1-7V46c0-5-2-9-5-12z"/><path fill="#535353" d="M99 45c2-2 5-3 7-3h44c3 0 6 1 7 3 2 2 4 5 4 8v30l-1 7c0 3-3 6-6 8h-8c-1 5 0 9 1 13l-10-13h-31c-4 0-9-3-10-8v-5-32c0-3 1-6 3-8z"/><path fill="#FFF" d="M32 81l3-7 3-8 3-8 2-9 1-1v-2l1-2h4l1 1 1 1v6l-3 7-3 8-3 7-2 7-1 1v5l-1 2v2l1 2 1 1h1l3-1 5-5 5-6 5-7 5-9 3-8 1-1h2l2 1 1 2v1l-1 2-1 3-1 3-1 4v12l1 3v2l1 2 2 1 2-1 3-3 3-4 2-5 3-6 2-5 2-6 1-5 1-4v-4l1-3 1-4 1-2 1-1 1-1 1-1 2 1 1 3v4l-1 5-1 4-1 5-3 9-4 10-5 8-4 7-2 2-3 2-3 1-2 1q-3 0-5-2l-3-4-2-6v-7l-4 6-4 5-3 3-4 3-4 3-4 1-4-1-2-2-2-3v-4-6l1-5zM140 71l-1 1h-2l-3 1-3 1-2 1-1 1h-1-1l-1 1-1-1h-1l-1-2v-1l1-2 2-1 2-1h3l1-1h2l3-1 3-1 2-1 2 1 2 1 1 1v4l-3 7-5 6-6 5-7 3h-1l-2 1h-7-1v-1l-4-2-3-3-1-3-1-4 1-5 2-6 3-5 4-5 5-5 5-3 3-2 3-2 4-1 3-1h3l2 2 2 1v5l-1 1h1-1-2l-2-1-1-1-1-1h-1l-5 2-6 4-6 5-4 5-4 6-1 6 1 4 3 3 2 1 3 1 2-1 3-1 3-1 2-2q4-2 6-5l4-7v-1z"/></svg>
+                WG Nürnberg
+            </a>
+            <a href="#kontakt" class="btn btn-primary">Jetzt anfragen</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">Young Professional · Nürnberg · 4. OG</span>
+                    <h1>Dein erstes echtes Zuhause nach dem Start</h1>
+                    <p class="hero-subtitle">Großzügige WG für Berufseinsteiger, die Wert auf ruhige Atmosphäre, professionelles Umfeld und ein bisschen Lebensqualität legen – mit eigener Dachterrasse inklusive.</p>
+                    <div class="hero-buttons">
+                        <a href="#kontakt" class="btn btn-primary">Jetzt anfragen</a>
+                        <a href="#erwartet" class="btn btn-secondary">Details ansehen</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <span class="hero-card-badge">4. OG | mit Dachterrasse</span>
+                    <div class="hero-card-icons">🏙️ 💼 🌇</div>
+                    <h3>WG für Berufstätige</h3>
+                    <p>Ruhig genug zum Arbeiten, lebendig genug zum Leben. Für Menschen, die gerade im Berufsleben ankommen.</p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">~25</div>
+                            <div class="hero-stat-label">min. Innenstadt</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">360°</div>
+                            <div class="hero-stat-label">Ausblick</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">WG</div>
+                            <div class="hero-stat-label">Professionals</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address Bar -->
+    <div class="address-bar">
+        <div class="container">
+            <span>📍 Vordere Sterngasse 2a, 90402 Nürnberg</span>
+            <a href="tel:09112355810">📞 0911-2355810</a>
+            <a href="mailto:info@wg-nuernberg.de">✉️ info@wg-nuernberg.de</a>
+        </div>
+    </div>
+
+    <!-- Was dich erwartet -->
+    <section id="erwartet" class="section">
+        <div class="container">
+            <span class="section-label">Was dich erwartet</span>
+            <h2 class="section-title">Designed für den Ernst des Lebens</h2>
+            <p class="section-text">Du hast deinen ersten Job – jetzt fehlt nur noch ein Zuhause, das mit deinem neuen Rhythmus mithalten kann. Ruhig genug zum Arbeiten, lebendig genug zum Leben.</p>
+            <div class="blocks">
+                <div class="block">
+                    <div class="block-icon">💼</div>
+                    <h4>Homeoffice-freundlich</h4>
+                    <p>Ruhige WG-Atmosphäre, schnelles WLAN und genug Platz für deinen Schreibtisch.</p>
+                </div>
+                <div class="block">
+                    <div class="block-icon">🌇</div>
+                    <h4>Dachterrasse exklusiv</h4>
+                    <p>Großzügige Terrasse mit Aussicht – ideal zum Entspannen nach einem langen Arbeitstag.</p>
+                </div>
+                <div class="block">
+                    <div class="block-icon">🧘</div>
+                    <h4>Ruhige Mitbewohner</h4>
+                    <p>WG für Berufstätige: Respektvoller Umgang, geregelte Zeiten, keine Partywohnung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ausstattung -->
+    <section class="section section-light">
+        <div class="container">
+            <span class="section-label">Ausstattung</span>
+            <h2 class="section-title">Mehr als nur ein Zimmer</h2>
+            <p class="section-text">Alles, was du für den Start ins Berufsleben brauchst – unter einem Dach.</p>
+            <div class="cards cards-3">
+                <div class="card">
+                    <div class="card-icon">🚇</div>
+                    <h3>Top Anbindung</h3>
+                    <p>ÖPNV in fußläufiger Nähe, schnell zu Gewerbegebieten und Innenstadt.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📦</div>
+                    <h3>Großzügige Räume</h3>
+                    <p>Helle, gut geschnittene Zimmer mit ausreichend Stauraum – kein Studenten-Kellerloch.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🍳</div>
+                    <h3>Vollwertige Küche</h3>
+                    <p>Meal prep und Feierabend-Kochen macht in dieser Küche richtig Spaß.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terrasse -->
+    <section class="section section-primary">
+        <div class="container" style="text-align: center;">
+            <span class="section-label">Das Highlight</span>
+            <h2 class="section-title">Deine Dachterrasse im 4. Stock</h2>
+            <p class="section-text" style="margin: 0 auto 32px;">Morgenkaffee mit Weitblick. Feierabend-Sundowner. Spontanes Grillen. Die Terrasse gehört mit zur WG – und hebt dein Zuhause auf ein anderes Level.</p>
+            <div class="icon-row">
+                <div class="icon-item">
+                    <div class="icon-item-icon">☕</div>
+                    <div class="icon-item-label">Morgens</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-icon">🌅</div>
+                    <div class="icon-item-label">Sunset</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-icon">🍖</div>
+                    <div class="icon-item-label">Grillen</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-icon">🌿</div>
+                    <div class="icon-item-label">Pflanzen</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-icon">📖</div>
+                    <div class="icon-item-label">Lesen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innenstadtlage -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Innenstadtlage</span>
+            <h2 class="section-title">Kein Auto. Kein Stress. Kein Parkplatz.</h2>
+            <p class="section-text">Mitten in Nürnberg bedeutet: alles ist zu Fuß, per Rad oder mit dem ÖPNV erreichbar. Kein Stau, keine Versicherung, keine Werkstatttermine – einfach losfahren.</p>
+            <div class="grid-blocks">
+                <div class="grid-block">
+                    <div class="grid-block-icon">🚇</div>
+                    <h4>U-Bahn & Bus</h4>
+                    <p>Direkte Verbindung zu allen Stadtteilen und Gewerbegebieten</p>
+                </div>
+                <div class="grid-block">
+                    <div class="grid-block-icon">🚲</div>
+                    <h4>Fahrrad-Infrastruktur</h4>
+                    <p>Gut ausgebautes Radnetz – zur Arbeit in 15 Minuten</p>
+                </div>
+                <div class="grid-block">
+                    <div class="grid-block-icon">🛒</div>
+                    <h4>Einkaufen zu Fuß</h4>
+                    <p>Supermarkt, Bäcker und Apotheke direkt um die Ecke</p>
+                </div>
+                <div class="grid-block">
+                    <div class="grid-block-icon">🍽️</div>
+                    <h4>Restaurants & Cafés</h4>
+                    <p>Innenstadtflair ohne Innenstadtlärm – das Beste aus beiden Welten</p>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-value">≥ 400€</div>
+                <div class="highlight-box-label">gespart pro Monat ohne Auto</div>
+                <p class="highlight-box-text">Versicherung, Sprit, Werkstatt, Parkgebühren – wer in der Innenstadt wohnt und auf ein Auto verzichten kann, hat jeden Monat mehr übrig. Für Reisen. Für Erlebnisse. Für dich.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nachhaltigkeit -->
+    <section class="section section-dark">
+        <div class="container">
+            <span class="section-label">Nachhaltig leben</span>
+            <h2 class="section-title">Gut für dich – gut fürs Klima</h2>
+            <p class="section-text">WG-Leben in der Innenstadt ist eine der nachhaltigsten Wohnformen überhaupt. Nicht als Verzicht – sondern als clevere Entscheidung.</p>
+            <div class="pills" style="flex-direction: column; gap: 16px;">
+                <div class="pill" style="display: block;">
+                    <span class="pill-icon">🌱</span>
+                    <span class="pill-title">Geteilte Ressourcen</span>
+                    <span class="pill-text">Küche, Wohnfläche und Geräte werden geteilt – weniger Verbrauch, gleicher Komfort.</span>
+                </div>
+                <div class="pill" style="display: block;">
+                    <span class="pill-icon">🚗</span>
+                    <span class="pill-title">Kein Auto nötig</span>
+                    <span class="pill-text">Deine CO₂-Bilanz sinkt drastisch, wenn du das Auto weglässt. Innenstadtlage macht's möglich.</span>
+                </div>
+                <div class="pill" style="display: block;">
+                    <span class="pill-icon">🏙️</span>
+                    <span class="pill-title">Kürzere Wege</span>
+                    <span class="pill-text">Kurze Arbeitswege bedeuten weniger Emissionen – und mehr Zeit für dich.</span>
+                </div>
+                <div class="pill" style="display: block;">
+                    <span class="pill-icon">♻️</span>
+                    <span class="pill-title">Bewusster Konsum</span>
+                    <span class="pill-text">WG-Leben fördert natürlich einen bewussteren Umgang mit Energie, Wasser und Lebensmitteln.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kostenvergleich -->
+    <section class="section section-light">
+        <div class="container">
+            <span class="section-label">Finanzielle Freiheit</span>
+            <h2 class="section-title">Was du mit der Mietdifferenz machst, liegt bei dir</h2>
+            <p class="section-text">WG-Zimmer vs. Einzelwohnung: Der Unterschied ist größer als viele denken – und er landet direkt in deiner Freiheit.</p>
+            <div class="comparison">
+                <div class="comparison-card">
+                    <h4>Einzelwohnung Nürnberg</h4>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">Kaltmiete (30 m²)</span>
+                        <span class="comparison-item-value">~850 €</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">Nebenkosten</span>
+                        <span class="comparison-item-value">~150 €</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">Internet</span>
+                        <span class="comparison-item-value">~30 €</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">GEZ / Rundfunk</span>
+                        <span class="comparison-item-value">~18 €</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">Parkplatz (optional)</span>
+                        <span class="comparison-item-value">~80 €</span>
+                    </div>
+                    <div class="comparison-item comparison-total">
+                        <span>Gesamt</span>
+                        <span>~1.130 €</span>
+                    </div>
+                </div>
+                <div class="comparison-card" style="border-color: var(--primary); border-width: 2px;">
+                    <h4>WG-Zimmer (diese WG)</h4>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">Warmmiete inkl. NK</span>
+                        <span class="comparison-item-value">~650 €</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">Internet inklusive</span>
+                        <span class="comparison-item-value">0 €</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">GEZ geteilt</span>
+                        <span class="comparison-item-value">~6 €</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">Kein Parkplatz nötig</span>
+                        <span class="comparison-item-value">0 €</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-item-label">Dachterrasse inklusive</span>
+                        <span class="comparison-item-value">✓</span>
+                    </div>
+                    <div class="comparison-item comparison-total">
+                        <span>Gesamt</span>
+                        <span>~656 €</span>
+                    </div>
+                </div>
+            </div>
+            <div class="savings-box">
+                <p>Das sind ~475 € mehr im Monat, die du in Reisen, Erlebnisse, Altersvorsorge oder einfach ein gutes Leben investieren kannst.</p>
+                <div class="savings-box-value">≈ 5.700 € / Jahr</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Für wen -->
+    <section class="section section-dark">
+        <div class="container">
+            <span class="section-label">Für wen diese WG ist</span>
+            <h2 class="section-title">Passend für Young Professionals</h2>
+            <p class="section-text">Diese WG ist nichts für alle – und das ist gut so. Hier wohnen Menschen, die gerade im Berufsleben ankommen und ein solides, schönes Zuhause suchen.</p>
+            <div class="keyword-groups">
+                <div class="keyword-group">
+                    <h4>Ideal wenn du …</h4>
+                    <ul>
+                        <li class="highlight">gerade deinen ersten Job antrittst</li>
+                        <li>noch keine Kaution für eine Einzelwohnung hast</li>
+                        <li>soziale Kontakte nach dem Studium suchst</li>
+                        <li class="highlight">zuverlässig & respektvoll bist</li>
+                        <li>im Homeoffice arbeitest</li>
+                    </ul>
+                </div>
+                <div class="keyword-group">
+                    <h4>Häufig gesucht von …</h4>
+                    <ul>
+                        <li>Auszubildenden (2./3. Jahr)</li>
+                        <li class="highlight">Trainees großer Unternehmen</li>
+                        <li>Absolventen auf Jobsuche</li>
+                        <li>Quereinsteigern in Nürnberg</li>
+                        <li class="highlight">Berufspendler (unter der Woche)</li>
+                    </ul>
+                </div>
+                <div class="keyword-group">
+                    <h4>Was wir bieten</h4>
+                    <ul>
+                        <li class="highlight">WG-Zimmer Nürnberg Berufstätige</li>
+                        <li>Möbliert oder unmöbliert möglich</li>
+                        <li>Zwischenmiete & langfristig</li>
+                        <li class="highlight">Dachterrasse inklusive</li>
+                        <li>Schnelle ÖPNV-Anbindung</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-primary cta-section">
+        <div class="container">
+            <span class="section-label">Jetzt handeln</span>
+            <h2 class="section-title">Dein Platz wartet.</h2>
+            <p class="section-text">Kein langes Bewerbungsverfahren. Schreib uns kurz wer du bist, wann du einziehen möchtest und was du dir vorstellst.</p>
+            <div>
+                <a href="#kontakt" class="btn btn-secondary" style="background: var(--white); color: var(--primary);">Jetzt anfragen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="section section-light">
+        <div class="container">
+            <span class="section-label">Interesse?</span>
+            <h2 class="section-title">Meld dich einfach</h2>
+            <p class="section-text">Kein langes Bewerbungsverfahren. Schreib uns kurz wer du bist, wann du einziehen möchtest und was du dir vorstellst.</p>
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-info">
+                        <div class="contact-info-item">📍 Nürnberg, 4. Obergeschoss</div>
+                        <div class="contact-info-item">🏠 WG für Berufstätige</div>
+                        <div class="contact-info-item">🌿 Mit Dachterrasse</div>
+                        <div class="contact-info-item">📩 Antwort innerhalb 24h</div>
+                    </div>
+                    <h4>Oder direkt per WhatsApp:</h4>
+                    <p style="color: var(--muted); margin: 12px 0;">Schnell und unkompliziert – schreib uns einfach eine Nachricht!</p>
+                    <a href="https://wa.me/499112355810" class="btn btn-success whatsapp-btn">
+                        💬 WhatsApp schreiben
+                    </a>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Dein Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="beruf">Beruf / Branche</label>
+                        <input type="text" id="beruf" name="beruf" placeholder="z.B. IT-Trainee bei Siemens">
+                    </div>
+                    <div class="form-group">
+                        <label for="einzug">Gewünschter Einzug</label>
+                        <input type="month" id="einzug" name="einzug">
+                    </div>
+                    <div class="form-group">
+                        <label for="vorstellung">Kurze Vorstellung</label>
+                        <textarea id="vorstellung" name="vorstellung" placeholder="Erzähl uns ein bisschen von dir..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Anfrage senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="https://www.wg-nuernberg.de" class="logo" style="margin-bottom: 16px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 180 180"><path fill="#535353" d="M108 34c-3-3-7-5-10-5H34c-3 0-7 2-10 5s-5 7-5 11v44l1 8c1 6 5 10 9 12s8 1 12 1c0 6 0 12-2 18 4-7 9-13 14-18h45c7 0 13-5 14-12l1-7V46c0-5-2-9-5-12z"/><path fill="#535353" d="M99 45c2-2 5-3 7-3h44c3 0 6 1 7 3 2 2 4 5 4 8v30l-1 7c0 3-3 6-6 8h-8c-1 5 0 9 1 13l-10-13h-31c-4 0-9-3-10-8v-5-32c0-3 1-6 3-8z"/><path fill="#FFF" d="M32 81l3-7 3-8 3-8 2-9 1-1v-2l1-2h4l1 1 1 1v6l-3 7-3 8-3 7-2 7-1 1v5l-1 2v2l1 2 1 1h1l3-1 5-5 5-6 5-7 5-9 3-8 1-1h2l2 1 1 2v1l-1 2-1 3-1 3-1 4v12l1 3v2l1 2 2 1 2-1 3-3 3-4 2-5 3-6 2-5 2-6 1-5 1-4v-4l1-3 1-4 1-2 1-1 1-1 1-1 2 1 1 3v4l-1 5-1 4-1 5-3 9-4 10-5 8-4 7-2 2-3 2-3 1-2 1q-3 0-5-2l-3-4-2-6v-7l-4 6-4 5-3 3-4 3-4 3-4 1-4-1-2-2-2-3v-4-6l1-5zM140 71l-1 1h-2l-3 1-3 1-2 1-1 1h-1-1l-1 1-1-1h-1l-1-2v-1l1-2 2-1 2-1h3l1-1h2l3-1 3-1 2-1 2 1 2 1 1 1v4l-3 7-5 6-6 5-7 3h-1l-2 1h-7-1v-1l-4-2-3-3-1-3-1-4 1-5 2-6 3-5 4-5 5-5 5-3 3-2 3-2 4-1 3-1h3l2 2 2 1v5l-1 1h1-1-2l-2-1-1-1-1-1h-1l-5 2-6 4-6 5-4 5-4 6-1 6 1 4 3 3 2 1 3 1 2-1 3-1 3-1 2-2q4-2 6-5l4-7v-1z"/></svg>
+                        WG Nürnberg
+                    </a>
+                    <p>Vordere Sterngasse 2a<br>90402 Nürnberg</p>
+                    <p style="margin-top: 12px;">
+                        <a href="tel:09112355810">0911-2355810</a><br>
+                        <a href="mailto:info@wg-nuernberg.de">info@wg-nuernberg.de</a>
+                    </p>
+                </div>
+                <div>
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.wg-nuernberg.de">Startseite</a></li>
+                        <li><a href="https://www.wg-nuernberg.de/impressum">Impressum</a></li>
+                        <li><a href="https://www.wg-nuernberg.de/datenschutz">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Kontakt</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@wg-nuernberg.de">E-Mail schreiben</a></li>
+                        <li><a href="https://wa.me/499112355810">WhatsApp</a></li>
+                        <li><a href="tel:09112355810">Anrufen</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 WG Nürnberg. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

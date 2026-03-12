@@ -1,0 +1,194 @@
+# WG Nürnberg Landing Page — Berufsanfänger-WG
+
+> Design: Siehe CORPORATE-DESIGN.md für Farben, Logo, Typografie und Layout.
+
+
+## Seitentyp
+Landing Page für eine spezifische WG-Zielgruppe
+
+## Zielgruppe
+Berufseinsteiger, Young Professionals, Trainees, Absolventen auf Jobsuche
+
+## Seitenname
+BERUFSEINSTEIGER-WG
+
+---
+
+## HERO
+
+Tag: Young Professional · Nürnberg · 4. OG
+Überschrift: Dein erstes echtes Zuhause nach dem Start
+Untertitel: Großzügige WG für Berufseinsteiger, die Wert auf ruhige Atmosphäre, professionelles Umfeld und ein bisschen Lebensqualität legen – mit eigener Dachterrasse inklusive.
+Buttons: [Jetzt anfragen] [Details ansehen]
+
+Hero-Card:
+- Badge: 4. OG | mit Dachterrasse
+- Titel: WG für Berufstätige
+- Text: Ruhig genug zum Arbeiten, lebendig genug zum Leben. Für Menschen, die gerade im Berufsleben ankommen.
+- Icons: 🏙️ 💼 🌇
+
+Stats:
+- ~25 | min. Innenstadt
+- 360° | Ausblick
+- WG | Professionals
+
+---
+
+## SEKTION: Was dich erwartet
+
+Label: Was dich erwartet
+Titel: Designed für den Ernst des Lebens
+Text: Du hast deinen ersten Job – jetzt fehlt nur noch ein Zuhause, das mit deinem neuen Rhythmus mithalten kann. Ruhig genug zum Arbeiten, lebendig genug zum Leben.
+
+Blöcke:
+- 💼 Homeoffice-freundlich: Ruhige WG-Atmosphäre, schnelles WLAN und genug Platz für deinen Schreibtisch.
+- 🌇 Dachterrasse exklusiv: Großzügige Terrasse mit Aussicht – ideal zum Entspannen nach einem langen Arbeitstag.
+- 🧘 Ruhige Mitbewohner: WG für Berufstätige: Respektvoller Umgang, geregelte Zeiten, keine Partywohnung.
+
+---
+
+## SEKTION: Ausstattung (grauer Hintergrund)
+
+Label: Ausstattung
+Titel: Mehr als nur ein Zimmer
+Text: Alles, was du für den Start ins Berufsleben brauchst – unter einem Dach.
+
+Karten (3 Spalten):
+- 🚇 Top Anbindung: ÖPNV in fußläufiger Nähe, schnell zu Gewerbegebieten und Innenstadt.
+- 📦 Großzügige Räume: Helle, gut geschnittene Zimmer mit ausreichend Stauraum – kein Studenten-Kellerloch.
+- 🍳 Vollwertige Küche: Meal prep und Feierabend-Kochen macht in dieser Küche richtig Spaß.
+
+---
+
+## SEKTION: Terrasse (farbiger Hintergrund)
+
+Label: Das Highlight
+Titel: Deine Dachterrasse im 4. Stock
+Text: Morgenkaffee mit Weitblick. Feierabend-Sundowner. Spontanes Grillen. Die Terrasse gehört mit zur WG – und hebt dein Zuhause auf ein anderes Level.
+
+Icons: ☕ Morgens | 🌅 Sunset | 🍖 Grillen | 🌿 Pflanzen | 📖 Lesen
+
+---
+
+## SEKTION: Innenstadtlage
+
+Label: Innenstadtlage
+Titel: Kein Auto. Kein Stress. Kein Parkplatz.
+Text: Mitten in Nürnberg bedeutet: alles ist zu Fuß, per Rad oder mit dem ÖPNV erreichbar. Kein Stau, keine Versicherung, keine Werkstatttermine – einfach losfahren.
+
+Blöcke (2x2 Grid):
+- 🚇 U-Bahn & Bus: Direkte Verbindung zu allen Stadtteilen und Gewerbegebieten
+- 🚲 Fahrrad-Infrastruktur: Gut ausgebautes Radnetz – zur Arbeit in 15 Minuten
+- 🛒 Einkaufen zu Fuß: Supermarkt, Bäcker und Apotheke direkt um die Ecke
+- 🍽️ Restaurants & Cafés: Innenstadtflair ohne Innenstadtlärm – das Beste aus beiden Welten
+
+Highlight-Box:
+- Große Zahl: ≥ 400€
+- Label: gespart pro Monat ohne Auto
+- Text: Versicherung, Sprit, Werkstatt, Parkgebühren – wer in der Innenstadt wohnt und auf ein Auto verzichten kann, hat jeden Monat mehr übrig. Für Reisen. Für Erlebnisse. Für dich.
+
+---
+
+## SEKTION: Nachhaltigkeit (dunkler Hintergrund)
+
+Label: Nachhaltig leben
+Titel: Gut für dich – gut fürs Klima
+Text: WG-Leben in der Innenstadt ist eine der nachhaltigsten Wohnformen überhaupt. Nicht als Verzicht – sondern als clevere Entscheidung.
+
+Pillen/Blöcke:
+- 🌱 Geteilte Ressourcen: Küche, Wohnfläche und Geräte werden geteilt – weniger Verbrauch, gleicher Komfort.
+- 🚗 Kein Auto nötig: Deine CO₂-Bilanz sinkt drastisch, wenn du das Auto weglässt. Innenstadtlage macht's möglich.
+- 🏙️ Kürzere Wege: Kurze Arbeitswege bedeuten weniger Emissionen – und mehr Zeit für dich.
+- ♻️ Bewusster Konsum: WG-Leben fördert natürlich einen bewussteren Umgang mit Energie, Wasser und Lebensmitteln.
+
+---
+
+## SEKTION: Kostenvergleich (grauer Hintergrund)
+
+Label: Finanzielle Freiheit
+Titel: Was du mit der Mietdifferenz machst, liegt bei dir
+Text: WG-Zimmer vs. Einzelwohnung: Der Unterschied ist größer als viele denken – und er landet direkt in deiner Freiheit.
+
+Vergleich:
+Einzelwohnung Nürnberg:
+- Kaltmiete (30 m²): ~850 €
+- Nebenkosten: ~150 €
+- Internet: ~30 €
+- GEZ / Rundfunk: ~18 €
+- Parkplatz (optional): ~80 €
+- Gesamt: ~1.130 €
+
+WG-Zimmer (diese WG):
+- Warmmiete inkl. NK: ~650 €
+- Internet inklusive: 0 €
+- GEZ geteilt: ~6 €
+- Kein Parkplatz nötig: 0 €
+- Dachterrasse inklusive: ✓
+- Gesamt: ~656 €
+
+Ersparnis-Box: Das sind ~475 € mehr im Monat, die du in Reisen, Erlebnisse, Altersvorsorge oder einfach ein gutes Leben investieren kannst. ≈ 5.700 € / Jahr
+
+---
+
+## SEKTION: Für wen (dunkler Hintergrund)
+
+Label: Für wen diese WG ist
+Titel: Passend für Young Professionals
+Text: Diese WG ist nichts für alle – und das ist gut so. Hier wohnen Menschen, die gerade im Berufsleben ankommen und ein solides, schönes Zuhause suchen.
+
+Keyword-Gruppen (3 Spalten):
+Ideal wenn du …:
+- *gerade deinen ersten Job antrittst*
+- noch keine Kaution für eine Einzelwohnung hast
+- soziale Kontakte nach dem Studium suchst
+- *zuverlässig & respektvoll bist*
+- im Homeoffice arbeitest
+
+Häufig gesucht von …:
+- Auszubildenden (2./3. Jahr)
+- *Trainees großer Unternehmen*
+- Absolventen auf Jobsuche
+- Quereinsteigern in Nürnberg
+- *Berufspendler (unter der Woche)*
+
+Was wir bieten:
+- *WG-Zimmer Nürnberg Berufstätige*
+- Möbliert oder unmöbliert möglich
+- Zwischenmiete & langfristig
+- *Dachterrasse inklusive*
+- Schnelle ÖPNV-Anbindung
+
+(* = hervorgehoben)
+
+---
+
+## SEKTION: CTA (farbiger Hintergrund)
+
+Label: Jetzt handeln
+Titel: Dein Platz wartet.
+Text: Kein langes Bewerbungsverfahren. Schreib uns kurz wer du bist, wann du einziehen möchtest und was du dir vorstellst.
+Button: [Jetzt anfragen]
+
+---
+
+## SEKTION: Kontakt (grauer Hintergrund)
+
+Label: Interesse?
+Titel: Meld dich einfach
+Text: Kein langes Bewerbungsverfahren. Schreib uns kurz wer du bist, wann du einziehen möchtest und was du dir vorstellst.
+
+Info:
+- 📍 Nürnberg, 4. Obergeschoss
+- 🏠 WG für Berufstätige
+- 🌿 Mit Dachterrasse
+- 📩 Antwort innerhalb 24h
+
+Formular-Felder:
+- Dein Name (Text)
+- E-Mail (Email)
+- Beruf / Branche (Text, Placeholder: "z.B. IT-Trainee bei Siemens")
+- Gewünschter Einzug (Monat)
+- Kurze Vorstellung (Textarea)
+- Button: [Anfrage senden]
+
+WhatsApp-Button: 💬 WhatsApp schreiben → https://wa.me/499112355810
