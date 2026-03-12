@@ -855,7 +855,7 @@
             <h2 class="section-title">Meld dich – unverbindlich!</h2>
             <p class="section-text">Schreib uns kurz, wer du bist und welche Ausbildung du machst. Wir melden uns persönlich bei dir.</p>
             <div class="contact-grid">
-                <form class="contact-form" id="contact-form" name="contact-azubi-med-wg" action="/" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <form class="contact-form" name="contact-azubi-med-wg" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/danke.html">
                     <input type="hidden" name="form-name" value="contact-azubi-med-wg">
                     <p style="display:none"><input name="bot-field"></p>
                     <input type="hidden" name="_source" value="azubi-med-wg">
@@ -897,12 +897,8 @@
                         <textarea id="nachricht" name="nachricht"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Jetzt vormerken</button>
-                    <div id="form-success" style="display: none; margin-top: 16px; padding: 16px; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 6px; color: #155724;">
-                        Vielen Dank für deine Anfrage! Wir melden uns in Kürze bei dir.
-                    </div>
-                    <div id="form-error" style="display: none; margin-top: 16px; padding: 16px; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 6px; color: #721c24;">
-                        Es gab einen Fehler. Bitte versuche es erneut oder kontaktiere uns direkt.
-                    </div>
+                    
+                    
                 </form>
                 <div>
                     <h4>Oder direkt per WhatsApp:</h4>
@@ -952,38 +948,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = this;
-            const formData = new URLSearchParams(new FormData(form)).toString();
-            const successMsg = document.getElementById('form-success');
-            const errorMsg = document.getElementById('form-error');
-
-            fetch(window.location.pathname, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: formData
-            }).then(response => {
-                if (response.ok) {
-                    form.reset();
-                    successMsg.style.display = 'block';
-                    errorMsg.style.display = 'none';
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-811416115',
-                        'event_category': 'form_submit',
-                        'event_label': 'contact-form
-contact-form
-contact-azubi-med-wg'
-                    });
-                } else {
-                    throw new Error('Fehler');
-                }
-            }).catch(error => {
-                errorMsg.style.display = 'block';
-                successMsg.style.display = 'none';
-            });
-        });
-    </script>
+    
 </body>
 </html>
